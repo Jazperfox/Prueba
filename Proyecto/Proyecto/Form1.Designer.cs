@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,20 +78,28 @@
             // 
             // txtUser
             // 
-            this.txtUser.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.txtUser.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtUser.Location = new System.Drawing.Point(30, 118);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(193, 26);
             this.txtUser.TabIndex = 4;
+            this.txtUser.Text = "Ingrese su usuario";
+            this.txtUser.Enter += new System.EventHandler(this.userInsert);
+            this.txtUser.Leave += new System.EventHandler(this.userLeave);
             // 
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(30, 188);
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtPassword.Location = new System.Drawing.Point(30, 197);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '0';
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(193, 26);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.Text = "password";
+            this.txtPassword.Enter += new System.EventHandler(this.passInsert);
+            this.txtPassword.Leave += new System.EventHandler(this.passLeave);
             // 
             // Form1
             // 
@@ -123,7 +131,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtUser;
-        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.MaskedTextBox txtPassword;
     }
 }
 
