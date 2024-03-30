@@ -16,5 +16,14 @@ namespace Proyecto
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Su usuario es: " + txtUser.Text + "\nSu contraseña es: " + txtPassword.Text);
+            usuarios obj = new usuarios();
+            MessageBox.Show(obj.valida(txtUser.Text, txtPassword.Text));
+            
+
+        }
     }
 }
