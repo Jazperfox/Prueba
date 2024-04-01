@@ -20,7 +20,7 @@ namespace Proyecto
         private void button1_Click(object sender, EventArgs e)
         {
             string mensaje;
-            inicio formulario = new inicio();
+            
 
             MessageBox.Show("Su usuario es: " + txtUser.Text + "\nSu contraseña es: " + txtPassword.Text);
             usuarios obj = new usuarios();
@@ -29,8 +29,11 @@ namespace Proyecto
             if (mensaje=="valido")
             {
                 MessageBox.Show("Las credenciales ingresadas son " + mensaje);
+
+
                 
-                formulario.ShowDialog();
+                this.Close();
+                
                 
             }
             else

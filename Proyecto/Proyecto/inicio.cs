@@ -15,11 +15,28 @@ namespace Proyecto
         public inicio()
         {
             InitializeComponent();
+            //DateTime fecha= DateTime.Now;
+            //lblfecha.Text = fecha.ToString();
+            timer1.Enabled = true;
+
         }
 
-        private void btnsalir_Click(object sender, EventArgs e)
+       
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblfecha.Text = DateTime.Now.ToString();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
             this.Close();
+            //Program.form1.Show();
+        }
+
+        private void btnInsertar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
