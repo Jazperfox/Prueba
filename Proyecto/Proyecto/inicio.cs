@@ -12,6 +12,7 @@ namespace Proyecto
 {
     public partial class inicio : Form
     {
+        private DataTable dt;
         public inicio()
         {
             InitializeComponent();
@@ -36,7 +37,15 @@ namespace Proyecto
 
         private void btnInsertar_Click(object sender, EventArgs e)
         {
+            string fecha, hora,date;
+            date = DateTime.Now.ToString();
+            fecha = DateTime.Now.ToShortDateString();
+            hora = DateTime.Now.ToLongTimeString();
 
+            dgvTabla.Rows.Add(fecha, hora);
+
+            label1.Text = hora;
+            label2.Text = fecha;
         }
     }
 }

@@ -10,8 +10,8 @@ namespace Proyecto
 {
     internal class usuarios
     {
-        public static string [] users = {"Admin","Jose","Ricardo","Carmela"};
-        public static string[] password = { "0000", "holaa","25032000","jose" };
+        private static string [] users = {"Admin","Jose","Ricardo","Carmela"};
+        private static string[] password = { "0000", "holaa","25032000","jose" };
         public  string valida(string usuario, string contraseña)
         {
             string mensaje="invalido";
